@@ -1,14 +1,18 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "7fc2881a-74b5-4b84-bf1c-e6b693e6a7a2"
+    "analytics": "a0adc1e6-a60a-4ecf-82fb-41b4df9ec8c8"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "chahrazed": {
+    "chahra-zed-v1": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -16,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/chahrazed",
+            "outputPath": "dist/chahra-zed-v1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,9 +31,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css","node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/jquery/dist/jquery.min.js","node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -49,13 +53,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ]
             }
@@ -64,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "chahrazed:build"
+            "browserTarget": "chahra-zed-v1:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "chahrazed:build:production"
+              "browserTarget": "chahra-zed-v1:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "chahrazed:build"
+            "browserTarget": "chahra-zed-v1:build"
           }
         },
         "test": {
@@ -112,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "chahrazed:serve"
+            "devServerTarget": "chahra-zed-v1:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "chahrazed:serve:production"
+              "devServerTarget": "chahra-zed-v1:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "chahrazed"
+  "defaultProject": "chahra-zed-v1"
 }
