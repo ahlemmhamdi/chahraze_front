@@ -14,9 +14,9 @@ const routes: Routes = [
     path:'nouveau-chambres',
     component:NouveauChambresComponent
   },
-  /*{
-    path:"", redirectTo:"/chambres",pathMatch:'full'
-  },*/
+  {
+    path:"inscrit", redirectTo:"/chambres",pathMatch:'full'
+  },
   {
     path:"",
     component:ConnexionComponent
