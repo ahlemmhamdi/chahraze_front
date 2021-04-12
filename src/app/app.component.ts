@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'chahra-zed-v1';
+  sidenav:any;
+  private toggle(){
+
+  }
 }
