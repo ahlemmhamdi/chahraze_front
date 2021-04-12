@@ -8,6 +8,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
+import { LayoutModule } from './layout/layout.module';
+import { UserModule } from './shared/user/user.module';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { MaterialModule } from './shared/material/material.module';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    LayoutModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

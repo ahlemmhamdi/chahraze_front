@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LandPageComponent } from './layout/land-page/land-page.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:"",component:LandPageComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -2,7 +2,7 @@
   "name": "chahra-zed-v1",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng serve -o",
+    "go": "ng serve -o",
     "start": "node server.js",
     "build": "ng build  --prod",
     "test": "ng test",
