@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="onToggleSidenav()" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <a routerLink="#" mat-button>
+        <h1>Charazed</h1>
+        
+    </a>
+    <div fxFlex fxLayout fxLayoutAlign="end">
+        <div fxHide.lt-md>
+            <a routerLink="#" mat-button>Home</a>
+            <a routerLink="#" mat-button>Services</a>
+            <a routerLink="#" mat-button>About</a>
+            <a routerLink="#" mat-button>Contact</a>
+        </div>
+    </div>
+</mat-toolbar>
