@@ -6,6 +6,7 @@ import { LandPageComponent } from './land-page/land-page.component';
 import { ContacFormComponent } from './contac-form/contac-form.component';
 import { AboutComponent } from './about/about.component';
 import { MaterialModule } from '../shared/material/material.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,7 +20,8 @@ import { MaterialModule } from '../shared/material/material.module';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
   exports:[
     MainNavComponent,

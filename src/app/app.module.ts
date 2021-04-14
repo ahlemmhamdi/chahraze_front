@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { LayoutModule } from './layout/layout.module';
 import { UserModule } from './shared/user/user.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { UserModule } from './shared/user/user.module';
     BrowserAnimationsModule,
     MaterialModule,
     LayoutModule,
-    UserModule
+    UserModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
