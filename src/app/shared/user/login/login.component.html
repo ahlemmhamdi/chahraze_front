@@ -10,9 +10,9 @@
         <form class="px-3 pt-6 pb-8 mb-4 bg-white rounded shadow-md" [formGroup]="loginForm" #f>
           <mat-card-content>
             <mat-form-field class="w-full">
-              <input type="email" matInput placeholder="email" required formControlName="email">
-              <mat-error *ngIf="loginForm.value.email.invalid || loginForm.hasError">{{getErrorMessage()}}</mat-error>
-              <mat-icon matPrefix class="px-6">email</mat-icon>
+              <input type="text" matInput placeholder="username" required formControlName="username">
+              <mat-error *ngIf="loginForm.value.username.invalid || loginForm.hasError">{{getErrorMessage()}}</mat-error>
+              <mat-icon matPrefix class="px-6">person</mat-icon>
             </mat-form-field>
             <mat-form-field class="w-full">
               <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password' "

@@ -55,3 +55,4 @@ export class RegisterComponent implements OnInit {
 
 
 //TODO: to add minlength 6 Caracters to password form Control
+//TODO: to standardize the api response 

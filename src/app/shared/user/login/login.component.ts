@@ -13,10 +13,7 @@ import { AuthenticationService } from '../authentication.service';
 export class LoginComponent implements OnInit {
 
   public loginForm: FormGroup = this.formBuilder.group({
-    email: ['',Validators.compose([
-      Validators.required,
-      Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
-    ])],
+    username: ['',Validators.required],
     password: ['', Validators.required]
   });;
   public returnUrl: string= "";
@@ -41,7 +38,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.authenticationService.login(this.loginForm.value.email, this.loginForm.value.password)
+    this.authenticationService.login(this.loginForm.value.username, this.loginForm.value.password)
       .pipe(first())
       .subscribe(
         data => {
