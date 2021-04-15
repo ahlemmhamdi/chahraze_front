@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="flex flex-col h-full py-16 mx-auto">
+
+    <mat-card class="container flex flex-col items-center justify-center flex-1 max-w-sm px-3 mx-auto align-center">
+      <mat-card-header class="center">
+        <mat-card-title class="mb-8 text-3xl text-center">Register</mat-card-title>
+      </mat-card-header>
+  
+      <form class="px-3 pt-6 pb-8 mb-4 bg-white rounded shadow-md" [formGroup]="registerForm">
+        <mat-card-content>
+          <mat-form-field class="w-full">
+            <mat-icon color="primary" matPrefix>person</mat-icon>
+            <input type="text" class="py-4" matInput placeholder="Username" required formControlName="username">
+          </mat-form-field>
+  
+          <mat-form-field class="w-full">
+            <mat-icon color="primary" matPrefix>email</mat-icon>
+            <input type="email" class="py-4" matInput placeholder="email" required formControlName="email" name="email">
+            <mat-error *ngIf="registerForm.controls['email'].hasError('pattern')" > invalid email </mat-error>
+            <mat-error *ngIf="registerForm.controls['email'].hasError('required')" > email required </mat-error>
+    
+          </mat-form-field>
+  
+          <mat-form-field class="w-full">
+            <mat-icon color="primary" matPrefix>locked</mat-icon>
+            <input class="py-4" type="password" matInput placeholder="Password" [type]="hide ? 'password' : 'text'"
+              required formControlName="password" minlength="6">
+              <mat-error *ngIf="registerForm.controls['password'].hasError('required')" > password required </mat-error>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+  
+        </mat-card-content>
+        <div class="flex items-center justify-between">
+          <button mat-stroked-button color="accent" class="center" [disabled]="!registerForm.valid"
+            (click)="submitUser()">
+            Create Account
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  
+    <p class="text-xs font-bold text-center text-gray-500">
+      Charazed Booking Engine
+    </p>
+    <p class="text-xs text-center text-gray-500">
+      &copy;Ahlem MHAMMDI 2021 All rights reserved.
+    </p>
+  
+  </div>
+  

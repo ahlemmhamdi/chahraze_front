@@ -5,6 +5,9 @@ import { LoginComponent } from './shared/user/login/login.component';
 import { RegisterComponent } from './shared/user/register/register.component';
 
 
+
+//TODO: To add more routes to test authgards
+
 const routes: Routes = [
   {path:"",component:LandPageComponent},
   {path:"signup", component:RegisterComponent},
