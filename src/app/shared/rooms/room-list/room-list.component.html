@@ -1,0 +1,25 @@
+<div class="max-w-5xl px-6 py-16 mx-auto">
+    <div class="items-center md:flex md:space-x-6" *ngFor="let room of roomList;let i=index;">
+       
+        <section class="bg-white">
+            <div class="max-w-5xl px-6 py-16 mx-auto">
+                <div class="items-center md:flex md:space-x-6">
+                    <div class="md:w-1/2">
+                        <div class="flex items-center justify-center">
+                            <div class="max-w-md">
+                                <img class="object-cover object-center w-full rounded-md shadow" style="height: 500px;"
+                                    [src]="room.photo_url">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="mt-8 md:mt-0 md:w-1/2">
+                        <h3 class="text-2xl font-semibold text-gray-800">{{room.title}} <br> {{room.hotel}}</h3>
+                        <p class="max-w-md mt-4 text-gray-600">{{room.description}}</p>
+                        <a href="#" class="block mt-8 text-indigo-700 underline">Price : {{room.price}}</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

@@ -8,6 +8,6 @@ export interface IUser {
     role:string;
     isGranted:boolean;
     avatar_url?: string;
-    token: string;
+    accessToken: string;
 
 }
