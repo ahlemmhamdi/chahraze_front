@@ -1,9 +1,16 @@
-<form>
-    <div >
-      <input type="search" id="mySearch" name="q" size="30">
-      <button><mat-icon>search</mat-icon></button>
-    </div>
-  </form>
+<!-- Serach -->
+<section class="flex flex-auto items-center px-64 w-full">
+    <input 
+        type="search" id="mySearch" name="search" 
+        placeholde="Search where to pass your vacation ..."
+        class="w-full px-2 py-2 shadow border-blue-300 rounded shadow"
+        
+
+    >
+    <button mat-raised-button>
+        <mat-icon color="accent">search</mat-icon>
+    </button>
+</section>
 
 <div class="max-w-5xl px-6 py-16 mx-auto">
     <div class="items-center md:flex md:space-x-6 md:space-y-2" *ngFor="let room of roomList;let i=index;">
