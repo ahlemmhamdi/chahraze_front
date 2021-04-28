@@ -4,8 +4,7 @@
         type="search" id="mySearch" name="search" 
         placeholde="Search where to pass your vacation ..."
         class="w-full px-2 py-2 shadow border-blue-300 rounded shadow"
-        
-
+        [(ngModel)]="roomQuery"
     >
     <button mat-raised-button>
         <mat-icon color="accent">search</mat-icon>
@@ -13,7 +12,7 @@
 </section>
 
 <div class="max-w-5xl px-6 py-16 mx-auto">
-    <div class="items-center md:flex md:space-x-6 md:space-y-2" *ngFor="let room of roomList;let i=index;">
+    <div class="items-center md:flex md:space-x-6 md:space-y-2" *ngFor="let room of (roomList$ | async) | roomFilter : roomQuery;let i=index;">
 
         <section class="bg-white border-blue-100 w-full">
             <div class="max-w-5xl px-6 py-16 mx-auto shadow border-red-700">
@@ -22,16 +21,16 @@
                         <div class="flex items-center justify-center">
                             <div class="max-w-md">
                                 <img class="object-cover object-center w-1/2 rounded-md shadow"
-                                    [src]="room.photo_url">
+                                    [src]="room?.photo_url">
                             </div>
                         </div>
                     </div>
         
                     <div class="mt-8 md:mt-0 md:w-1/2 sm:full">
-                        <h3 class="text-2xl font-semibold text-gray-800">{{room.title}} <br> {{room?.hotel}}</h3>
+                        <h3 class="text-9xl font-semibold text-gray-800">{{room.title}} <a class="block mt-8 text-indigo-700 underline" href="#">{{room?.hotel}}</a> </h3>
                         <p class="max-w-md mt-4 text-gray-600">{{room?.description}}</p>
                         <div class="flex flex-row justify-between">
-                            <span class="block mt-8 text-indigo-700 underline">Price : {{room?.price}}</span>
+                            <span class="block mt-8 text-indigo-700 underline">Price : {{room?.price}} DT</span>
                             <button mat-raised-button class="self-end">Reservez</button>
                         </div>
                     </div>

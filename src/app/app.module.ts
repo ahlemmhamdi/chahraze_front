@@ -13,11 +13,13 @@ import { UserModule } from './shared/user/user.module';
 import { RouterModule } from '@angular/router';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { RoomsModule } from './shared/rooms/rooms.module';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
