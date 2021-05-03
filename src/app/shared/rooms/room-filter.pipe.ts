@@ -6,7 +6,7 @@ import { Room } from './room.model';
 })
 export class RoomFilterPipe implements PipeTransform {
 
-  transform(rooms: Room[], input: string): any {
+  transform(rooms: Room[] | any, input: string): any {
     if (input) {
       return rooms.filter(
         (room: Room) => {
