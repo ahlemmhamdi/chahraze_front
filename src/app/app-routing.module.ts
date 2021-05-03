@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandPageComponent } from './layout/land-page/land-page.component';
 import { MakeReservationComponent } from './shared/reservation/make-reservation/make-reservation.component';
+import { RoomResolver } from './shared/reservation/room.resolver';
 import { RoomListComponent } from './shared/rooms/room-list/room-list.component';
 import { LoginComponent } from './shared/user/login/login.component';
 import { RegisterComponent } from './shared/user/register/register.component';
@@ -13,7 +14,14 @@ const routes: Routes = [
   {path:"signup", component:RegisterComponent},
   {path:"signin",component:LoginComponent},
   {path:"room",component:RoomListComponent, canActivate:[AuthGuard]},
-  {path:"reservation/:id",component:MakeReservationComponent,canActivate:[AuthGuard]},
+  {
+    path:"reservation/:id",
+    component:MakeReservationComponent,
+    canActivate:[AuthGuard],
+    resolve: {
+      room:RoomResolver
+    }
+  },
   {path:"**", redirectTo:"", pathMatch:"full"}
 ];
 

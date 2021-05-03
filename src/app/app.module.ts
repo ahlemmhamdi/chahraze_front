@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { RoomsModule } from './shared/rooms/rooms.module';
 import { ContactComponent } from './contact/contact.component';
+import { ReservationModule } from './shared/reservation/reservation.module';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ContactComponent } from './contact/contact.component';
     LayoutModule,
     UserModule,
     RouterModule,
-    RoomsModule
+    RoomsModule,
+    ReservationModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

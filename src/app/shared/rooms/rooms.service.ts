@@ -15,4 +15,8 @@ export class RoomsService {
   getAllRooms():Observable<Room[]>{
     return this.http.get(`${environment.apiBaseURI}/rooms/getroom`) as Observable<any>;
   }
+
+  getRoomById(id:string):Observable<any>{
+    return this.http.get(`${environment.apiBaseURI}/rooms/getroom/${id}`)
+  }
 }
