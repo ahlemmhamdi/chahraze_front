@@ -4,7 +4,8 @@ import { RoomListComponent } from './room-list/room-list.component';
 import { RouterLink, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
-import { RoomFilterPipe } from './filter.pipe';
+import { RoomFilterPipe } from './room-filter.pipe';
+
 
 
 
